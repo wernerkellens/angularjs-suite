@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="myApp" class="no-js">
+<html lang="en" ng-app="suiteApp" class="no-js">
 <!--<![endif]-->
 
 <head>
@@ -19,29 +19,21 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body>
+<body ng-controller="MainCtrl">
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
         <h2>AngularJS Suite</h2>
         <ul class="nav nav-sidebar">
-          <li><a href="#!/view1">view1</a></li>
-          <li><a href="#!/view2">view2</a></li>
-          <li><a href="#!/view2">view3</a></li>
+          <li ng-repeat="app in apps">
+            <a href="#">{{app.name}}</a>
+          </li>
         </ul>
       </div>
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <div>
+        <div ng-repeat="bookmark in bookmarks">
           <button type="button" class="close">&times;</button>
-          <a href="#" target="_blank">Bookmark</a>
-        </div>
-        <div>
-          <button type="button" class="close">&times;</button>
-          <a href="#" target="_blank">Bookmark</a>
-        </div>
-        <div>
-          <button type="button" class="close">&times;</button>
-          <a href="#" target="_blank">Bookmark</a>
+          <a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
         </div>
         <hr/>
       </div>
