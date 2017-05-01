@@ -8,8 +8,12 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
+
+      'phonecat-app/**/*.module.js', // Load your module before the rest of your app.
+
       'components/**/*.js',
-      'view*/**/*.js'
+      'view*/**/*.js',
+      'phonecat-app/**/*.js'
     ],
 
     autoWatch: true,
