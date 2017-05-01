@@ -3,8 +3,6 @@
 // Declare app level module which depends on views, and components
 angular.module('suiteApp', [
   // 'ngRoute',
-  // 'myApp.view1',
-  // 'myApp.view2',
    'phonecatApp'
 ])
 // config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
