@@ -13,7 +13,8 @@ module.exports = function(config) {
 
       'components/**/*.js',
       'view*/**/*.js',
-      'phonecat-app/**/*.js'
+      'phonecat-app/**/*.js',
+      'movie-app/**/*.js'
     ],
 
     autoWatch: true,

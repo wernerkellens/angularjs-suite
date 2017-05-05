@@ -1,15 +1,14 @@
 'use strict';
 
 // define the 'phonecat app' module
-angular.module('phonecatApp', [
+angular.module('movieApp', [
     // ... which depends on the following modules
-    'phoneList',
     'ngRoute'
     ])
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/phonecat', {
-            template: '<phone-list></phone-list>'
+        $routeProvider.when('/movie', {
+            template: '<h1>movie</h1>'
         })
     }])
-    .controller('PhonecatAppController', [function () {
+    .controller('MovieAppController', [function () {
     }]);
