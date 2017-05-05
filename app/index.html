@@ -20,25 +20,21 @@
 </head>
 
 <body ng-controller="MainCtrl">
+  
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
-        <h2>AngularJS Suite</h2>
+        <a href="#!/home">
+          <h2>AngularJS Suite</h2>
+        </a>
         <ul class="nav nav-sidebar">
           <li ng-repeat="app in apps">
-            <a href="#">{{app.name}}</a>
+            <a href={{app.href}}>{{app.name}}</a>
           </li>
         </ul>
       </div>
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <div>
-          <phone-list></phone-list>
-        </div>
-        <div ng-repeat="bookmark in bookmarks">
-          <button type="button" class="close">&times;</button>
-          <a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
-        </div>
-        <hr/>
+        <div ng-view></div>
       </div>
     </div>
   </div>

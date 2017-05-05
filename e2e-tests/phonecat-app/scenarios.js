@@ -8,7 +8,8 @@ describe('PhoneCat Application', function() {
   describe('phoneList', function() {
 
     beforeEach(function() {
-      browser.get('index.html');
+      // browser.get('index.html');
+      browser.get('#!/phonecat');
     });
 
     it('should filter the phone list as a user types into the search box', function() {
