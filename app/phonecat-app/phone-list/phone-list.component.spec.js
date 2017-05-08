@@ -20,6 +20,7 @@ describe('phoneList', function () {
     }));
 
     it('should create a `phones` property with 2 phones fetched with `$http`', function () {
+      console.log('should create a `phones` property with 2 phones fetched with `$http`');
       expect(ctrl.phones).toBeUndefined();
 
       $httpBackend.flush();
@@ -27,6 +28,7 @@ describe('phoneList', function () {
     });
 
     it('should set a default value for the `orderProp` model', function () {
+      console.log('should set a default value for the `orderProp` model');
       expect(ctrl.orderProp).toBe('age');
     });
   });
